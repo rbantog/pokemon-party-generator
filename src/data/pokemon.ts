@@ -1,5 +1,5 @@
 export function getPokemonImg(name: string, num: number): string {
-    const updatedName = name.toLocaleLowerCase().split(' ').join('-');
+    const updatedName = name.toLocaleLowerCase().replace(`'`, '').split(' ').join('-');
     // const genName = num >= 906 ? 'scarlet-violet' : 'sword-shield';
 
     return `/sprites/${updatedName}.png`;

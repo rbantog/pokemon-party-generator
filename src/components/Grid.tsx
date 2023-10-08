@@ -16,8 +16,12 @@ function getPokemon(name: string): ReactElement[] {
         //default
         for (let i = 0; i < 6; i++) {
             pokemon.push(
-                <div className="text-lg font-bold text-center p-10 rounded-lg border border-black">
-                    <img src={pokeball} />
+                <div className="text-lg font-bold text-center p-6 rounded-lg border border-black">
+                    <img
+                        className="min-w-full"
+                        src={pokeball}
+                        style={{ width: '80px' }}
+                    />
                 </div>
             );
         }
@@ -31,7 +35,7 @@ function getPokemon(name: string): ReactElement[] {
             pokemonNumber = String(Math.floor(rng() * (MAX - MIN + 1) + MIN));
             pokemonName = (pokemonData as PokemonData)[pokemonNumber].name;
             pokemon.push(
-                <div className="text-lg font-bold text-center items-center p-10 rounded-lg border border-black">
+                <div className="text-sm md:text-md lg:text-lg font-bold text-center items-center p-4 rounded-lg border border-black">
                     <img
                         className="inline-block min-w-full"
                         src={getPokemonImg(
