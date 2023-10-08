@@ -15,7 +15,7 @@ function Form(): ReactElement {
                 e.preventDefault();
             }}
         >
-            <div className="form flex items-center justify-center">
+            <div className="form flex flex-col xxs:flex-row items-center justify-center">
                 <label className="block mb-2 text-sm font-medium p-2">
                     Trainer Name
                 </label>
@@ -50,17 +50,17 @@ function Form(): ReactElement {
                     >
                         Submit
                     </button>
-                    <button
-                        onClick={() => {
-                            setName('');
-                            setSearchParams({});
-                        }}
-                        type="button"
-                        className="py-3 px-4 inline-flex flex-shrink-0 justify-center items-center gap-2 rounded-r-md border-transparent font-semibold bg-transparent text-black underline focus:z-10 focus:outline-none focus:transparent text-sm"
-                    >
-                        Clear
-                    </button>
                 </div>
+                <button
+                    onClick={() => {
+                        setName('');
+                        setSearchParams({});
+                    }}
+                    type="button"
+                    className="py-3 px-4 inline-flex flex-shrink-0 justify-center items-center gap-2 rounded-r-md border-transparent font-semibold bg-transparent text-black underline focus:z-10 focus:outline-none focus:transparent text-sm"
+                >
+                    Clear
+                </button>
             </div>
         </form>
     );

@@ -35,7 +35,7 @@ function getPokemon(name: string): ReactElement[] {
             pokemonNumber = String(Math.floor(rng() * (MAX - MIN + 1) + MIN));
             pokemonName = (pokemonData as PokemonData)[pokemonNumber].name;
             pokemon.push(
-                <div className="text-sm md:text-md lg:text-lg font-bold text-center items-center p-4 rounded-lg border border-black">
+                <div className="text-sm xxs:text-md md:text-lg font-bold text-center items-center p-4 rounded-lg border border-black">
                     <img
                         className="inline-block min-w-full"
                         src={getPokemonImg(
@@ -58,7 +58,7 @@ function Grid(): ReactElement {
 
     return (
         <div className="flex items-center justify-center">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 p-5">
+            <div className="grid grid-cols-2 xxs:grid-cols-3 lg:grid-cols-6 gap-4 p-5">
                 {getPokemon(name)}
             </div>
         </div>
