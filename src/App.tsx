@@ -5,7 +5,7 @@ import Grid from './components/Grid';
 function App(): ReactElement {
     return (
         <div className="m-4">
-            <p className="text-center m-4">Generate your Pokémon team</p>
+            <p className="text-center m-4">Generate your Pokémon party</p>
             <Form />
             <Grid />
         </div>
