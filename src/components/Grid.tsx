@@ -2,7 +2,11 @@ import { ReactElement } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import seedrandom from 'seedrandom';
 
-import { getPokemonImg, pokemonData, PokemonData } from '../data/pokemon';
+import {
+    getPokemonImgByNumber,
+    pokemonData,
+    PokemonData,
+} from '../data/pokemon';
 import { sanitizeString } from '../helper/sanitize';
 import pokeball from '../images/pokeball-sprite.png';
 
@@ -38,10 +42,7 @@ function getPokemon(name: string): ReactElement[] {
                 <div className="text-sm xxs:text-md md:text-lg font-bold text-center items-center p-4 rounded-lg border border-black">
                     <img
                         className="inline-block min-w-full"
-                        src={getPokemonImg(
-                            pokemonName,
-                            parseInt(pokemonNumber)
-                        )}
+                        src={getPokemonImgByNumber(parseInt(pokemonNumber))}
                     />
                     <p>{pokemonName}</p>
                 </div>

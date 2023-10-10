@@ -5,6 +5,10 @@ export function getPokemonImg(name: string, num: number): string {
     return `/sprites/${updatedName}.png`;
 }
 
+export function getPokemonImgByNumber(num: number): string {
+    return `/sprites/pokemon/${num}.png`;
+}
+
 export interface Pokemon {
     name: string;
     type: string;
